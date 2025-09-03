@@ -15,14 +15,14 @@ let myHeading = document.querySelector("h1");
 function setUserName() {
   const myName = prompt("Please enter your name.");
   localStorage.setItem("name", myName);
-  myHeading.textContent = `Ton prénom : ${myName}`;
+  myHeading.textContent = `T'es moche ${myName}`;
 }
 
 if (!localStorage.getItem("name")) {
   setUserName();
 } else {
   const storedName = localStorage.getItem("name");
-  myHeading.textContent = `Ton prénom : ${storedName}`;
+  myHeading.textContent = `T'es moche ${storedName}`;
 }
 
 myButton.addEventListener("click", () => {
@@ -35,6 +35,6 @@ function setUserName() {
     setUserName();
   } else {
     localStorage.setItem("name", myName);
-    myHeading.textContent = `Ton prénom : ${myName}`;
+    myHeading.textContent = `T'es moche ${myName}`;
   }
 }
